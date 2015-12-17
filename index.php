@@ -32,7 +32,7 @@ ga('send', 'pageview');
 
 </header>
 <content>
-<div class="tieto" id="tietoa" <canvas id="canvas_center" width="200" height="100" style="border:1px solid #000000;"></div>
+<div class="tieto" id="tietoa"><canvas id="canvas_center" width="200" height="100" style="border:1px solid #000000;"></canvas></div>
 </content>
 <div class="popup" id="popup">Loading..</div>
 
@@ -55,5 +55,6 @@ ga('send', 'pageview');
 <script src="updates.js"></script>
 <script src="moi.js"></script>
 <script src="logibutton.js"></script>
+<script src="drawing.js"></script>
 </body>
 </html>
