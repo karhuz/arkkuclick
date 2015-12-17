@@ -1,4 +1,4 @@
-
+﻿
 <!----!Moro, lurk much? --->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -32,7 +32,7 @@ ga('send', 'pageview');
 
 </header>
 <content>
-<div class="tieto" id="tietoa" onClick="moiMitakuuluu(this)"> ;-)</div>
+<div class="tieto" id="tietoa" <canvas id="canvas_center" width="200" height="100" style="border:1px solid #000000;"></div>
 </content>
 <div class="popup" id="popup">Loading..</div>
 
