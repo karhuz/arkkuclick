@@ -27,8 +27,20 @@ function drawScreen() {
 ctx.font = "30px Arial";
 
 var lol = Math.random();
-var lol2 = lol *200;
-ctx.fillText(":-)",center_x+lol2,center_y+lol2);
+if (lol > 0.5)
+{
+	var lol2 = lol *20;
+	var location_x = center_x-lol2;
+	var location_y = center_y-lol2;
+	ctx.fillText(hymio,location_x,location_y);
+} else {
+
+		var lol2 = lol *2;
+	var location_x = center_x+lol2;
+	var location_y = center_y+lol2;
+	ctx.fillText(hymio,location_x,location_y);
+}
+
 }
 
 function clearScreen()
