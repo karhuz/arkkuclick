@@ -55,9 +55,13 @@ ga('send', 'pageview');
 :3
 </svg></div>
 </footer>
+
+<script src="main.js"></script>
+<script src="drawing.js"></script>
+<script src="click.js"></script>
+
 <script src="updates.js"></script>
 <script src="moi.js"></script>
 <script src="logibutton.js"></script>
-<script src="drawing.js"></script>
 </body>
 </html>
