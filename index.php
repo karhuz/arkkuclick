@@ -1,5 +1,5 @@
 ﻿
-<!----!Moro, lurk much? --->
+<!--Moro, lurk much? ---->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>bearz.arkku.net</title>
@@ -33,7 +33,8 @@ ga('send', 'pageview');
 </header>
 <content>
 
-<div class="tieto" id="tietoa"><canvas id="canvas_center" width="640" height="480" style="border:1px solid #000000;"></canvas></div>
+<!----<div class="tieto" id="tietoa"></div>---->
+<canvas id="canvas_center" width="640" height="480" style="border:1px solid #000000;"></canvas>
 
 </content>
 <div class="popup" id="popup">Loading..</div>
