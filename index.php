@@ -20,7 +20,6 @@ ga('send', 'pageview');
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 </head>
-<body>
 <header>
 <div class="top">
 <a id="load_link" href="index.php">#bearz.arkku.net</a>
@@ -34,7 +33,7 @@ ga('send', 'pageview');
 <content>
 
 <!----<div class="tieto" id="tietoa"></div>---->
-<canvas id="canvas_center" width="640" height="480" style="border:1px solid #000000;"></canvas>
+<canvas width="1920" height="1080" id="canvas_center" style="border:1px solid #000000;"></canvas>
 
 </content>
 <div class="popup" id="popup">Loading..</div>
@@ -44,9 +43,6 @@ ga('send', 'pageview');
 <div class="stuff" id="stuff">Loading..</div>
 <div class="update_info" id="update_info"><div class="close_updatediv" id="close_updatediv"><a id="close_update_info" href="">x</a></div><div class="update_info_title" id="update_info_title">Loading..</div><div class="update_info_text" id="update_info_text">loading..</div><div class="update_info_stats" id="update_info_stats">loading..</div><div class="update_info_button" id="update_info_button"><button id="purchase_button">Purchase!</button></div></div>
 <footer>
-<div class="footeri">
-© Pertti Roitto <div class="clicks" id="clicks"></div><div class="starpoints" id="starpoints"></div><div class="saveslot" id="saveslot"><a id="save_link" href="index.php">SAVE</a></div>
-</div>
 <div class="logi" id="logi"><a id="close_logi" href="">x</a><textarea name="logibox" cols="26" rows="5" id="logibox" readonly>...</textarea></div>
 <div class="log_button" id="logbutton" onClick="showLog(this)"><svg width="32" height="32">
   <rect x="0" y="0" rx="5" ry="5" width="32" height="32"
