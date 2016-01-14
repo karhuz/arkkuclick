@@ -187,7 +187,7 @@ if (superpoints>=25)
 
 	//clearScreen();
 	//tyhjennetaanruutu
-	//$('canvas').clearCanvas();
+	$('canvas').clearCanvas();
 
 		//piirretään ruutu
 	drawScreen();
