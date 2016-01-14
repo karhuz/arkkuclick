@@ -2,6 +2,9 @@
 
 $("#canvas_center").click(function(e){
 clicks++;
+superpoints++;
+
+howmany = "1";
 
 push();
 
