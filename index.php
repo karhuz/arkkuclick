@@ -34,7 +34,7 @@ ga('send', 'pageview');
 <content>
 
 <!----<div class="tieto" id="tietoa"></div>---->
-<canvas width="1920" height="1080" id="canvas_center" style="border:1px solid #000000;"></canvas>
+<canvas width="1920" height="1080" id="canvas_center" style="border:1px solid #000000;"> :-) Your little browser should support HTML5 canvas. :-(</canvas>
 
 </content>
 <div class="popup" id="popup">Loading..</div>
