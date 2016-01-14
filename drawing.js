@@ -64,17 +64,23 @@ function drawScreen() {
 // piirretään valkonen neliö
 $('canvas').drawRect({
 	layer: true,
+	 groups: ['hymio'],
+  name: 'box',
   fillStyle: '#FFFFFF',
     strokeStyle: '#000000',
   strokeWidth: 1,
   x: x+center_x, y: y+center_y,
   width: 427,
-  height: 320
+  height: 320,
+  click: function(CLICK) {
+  }
 });
 
 //hymiö
 $('canvas').drawText({
 	layer: true,
+	 groups: ['hymio'],
+  name: 'smiley',
   fillStyle: '#000000',
   x: x+center_x, y: y+center_y,
   fontSize: 48,
@@ -93,8 +99,20 @@ if (showClicks == true)
   fontFamily: 'Verdana, sans-serif',
   text: 'Clicks: ' +clicks
 });
+}
+
+if (showStars == true)
+{
+	$('canvas').drawText({
+  fillStyle: '#000000',
+  x: 250, y: 125,
+  fontSize: 22,
+  fontFamily: 'Verdana, sans-serif',
+  text: '*: ' +stars
+});
 
 }
+	//$('canvas').drawLayers();
 	//ctx.fillText(hymio,x+center_x,y+center_y);
 }
 
@@ -156,7 +174,9 @@ if (clicks>=10) showClicks = true;
 if (superpoints>=25)
 {
 	superpoints = 0;
+	showStars = true;
 	 new Drop('item','*');
+	 stars++;
 }
 
 
@@ -167,10 +187,11 @@ if (superpoints>=25)
 
 	//clearScreen();
 	//tyhjennetaanruutu
-	$('canvas').clearCanvas();
+	//$('canvas').clearCanvas();
 
 		//piirretään ruutu
 	drawScreen();
+
 
 // hieno systeemi mikä bumpauttaa tota hymiötä vähän
 	life++;

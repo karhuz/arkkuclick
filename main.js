@@ -10,7 +10,11 @@
 
 var clicks = 0;
 
+var stars = 0;
+
 var showClicks = false;
+
+var showStars = false;
 
 var superpoints = 0;
 
