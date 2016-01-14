@@ -55,7 +55,7 @@ function clearScreen()
 
 function shownumber(str,merkkix,merkkiy){
 	var ctx = c.getContext("2d");
-ctx.font = "60px Arial";
+ctx.font = "20px Arial";
 
 	ctx.fillText(str,merkkix+center_x+80,merkkiy+center_y+100);
 
