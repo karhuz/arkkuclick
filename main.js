@@ -10,6 +10,10 @@
 
 var clicks = 0;
 
+var showClicks = false;
+
+var superpoints = 0;
+
 
 // ------
 
@@ -25,3 +29,8 @@ var hymio = ":-)";
 
 //center canvas
 var c = document.getElementById("canvas_center");
+
+
+
+// Klikkauksen multiplieri, voi näyttää vaikka muutaki kivaa tässä
+var howmany = "ERROR";
