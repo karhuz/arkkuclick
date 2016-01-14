@@ -20,8 +20,8 @@ Pop=function(el,str)
 {
     this.life=0;
   this.el=el;
-  	this.offx=Math.floor(Math.random()*20-10);
-	this.offy=Math.floor(Math.random()*20-10);
+  	this.offx=Math.floor(Math.random()*30-10);
+	this.offy=Math.floor(Math.random()*50-10);
   this.str=str;
 	Pops.push(this);
 }
@@ -41,10 +41,17 @@ function push() {
 
 
 function drawScreen() {
-	var ctx = c.getContext("2d");
-ctx.font = "60px Arial";
+	//var ctx = c.getContext("2d");
+//ctx.font = "60px Arial";
 
-	ctx.fillText(hymio,x+center_x,y+center_y);
+$('canvas').drawText({
+  fillStyle: '#000000',
+  x: center_x, y: center_y,
+  fontSize: 48,
+  fontFamily: 'Verdana, sans-serif',
+  text: hymio
+});
+	//ctx.fillText(hymio,x+center_x,y+center_y);
 }
 
 function clearScreen()
@@ -54,15 +61,26 @@ function clearScreen()
 }
 
 function shownumber(str,merkkix,merkkiy){
-	var ctx = c.getContext("2d");
-ctx.font = "20px Arial";
+	//var ctx = c.getContext("2d");
+//ctx.font = "20px Arial";
 
-	ctx.fillText(str,merkkix+center_x+80,merkkiy+center_y+100);
+	//ctx.fillText(str,merkkix+center_x+80,merkkiy+center_y+100);
+
+
+	$('canvas').drawText({
+  fillStyle: '#000000',
+  x: merkkix+center_x+80, y: merkkiy+center_y+100,
+  fontSize: 48,
+  fontFamily: 'Verdana, sans-serif',
+  text: str
+});
 
 }
 
 function TimerTick(){
-	clearScreen();
+
+	//clearScreen();
+	$('canvas').clearCanvas();
 
 	life++;
 	if (life > 2)
@@ -79,7 +97,7 @@ function TimerTick(){
 	for (var i in Pops) {
 
 	var merkkix=Pops[i].offx-100;
-		var merkkiy=Math.pow(Pops[i].life/100,0.5)*100+Pops[i].offy-10;
+		var merkkiy=Math.pow(Pops[i].life/50,0.5)*120+Pops[i].offy-10;
 
 
 shownumber(Pops[i].str, merkkix,merkkiy);
