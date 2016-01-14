@@ -26,8 +26,10 @@ ga('send', 'pageview');
 <a id="load_link" href="index.php">#bearz.arkku.net</a>
 </div>
 
+<!---
 <div class="stats_bar" id="stats_bar"><div class="stats_bar_clicks" id="stats_bar_clicks">Clicks</div><div class="stats_bar_cps" id="stats_bar_cps">CPS</div>
 <div class="stats_bar_stars" id="stats_bar_stars">stars</div>
+-->
 </div>
 
 </header>
@@ -37,8 +39,10 @@ ga('send', 'pageview');
 <canvas width="1920" height="1080" id="canvas_center" style="border:1px solid #000000;"> :-) Your little browser should support HTML5 canvas. :-(</canvas>
 
 </content>
+<div class="invbutton" id="invbutton">Loading..</div>
+<div class="inv" id="inv">Loading..</div>
+<!----
 <div class="popup" id="popup">Loading..</div>
-
 <div class="invbutton" id="invbutton">Loading..</div>
 <div class="inv" id="inv">Loading..</div>
 <div class="stuff" id="stuff">Loading..</div>
@@ -51,6 +55,7 @@ ga('send', 'pageview');
   <text fill="#ffffff" font-size="10" font-family="Verdana" x="5" y="20">LOG</text>
 :3
 </svg></div>
+---->
 </footer>
 
 <script src="main.js"></script>
@@ -58,7 +63,5 @@ ga('send', 'pageview');
 <script src="click.js"></script>
 
 <script src="updates.js"></script>
-<script src="moi.js"></script>
-<script src="logibutton.js"></script>
 </body>
 </html>

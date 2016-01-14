@@ -179,6 +179,17 @@ if (superpoints>=25)
 	 stars++;
 }
 
+if (clicks==100) showInv = true;
+
+if (showInv == true) 
+{
+	$('.inv').delay(1).fadeIn(300);
+		$('.invbutton').delay(1).fadeOut(300);
+		$( ".inv" ).text("");
+		updateArrayToInv();
+	showInv = false;
+}
+
 
 
 
