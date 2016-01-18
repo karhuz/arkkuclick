@@ -1,6 +1,14 @@
 //click.js
 
 $("#canvas_center").click(function(e){
+CLICK();
+
+ });
+
+
+
+function CLICK () 
+{
 clicks++;
 superpoints++;
 
@@ -21,4 +29,4 @@ push();
 	console.log(clicks);
 	}
 
- });
+}
