@@ -41,8 +41,8 @@ ga('send', 'pageview');
 </content>
 <div class="invbutton" id="invbutton">Loading..</div>
 <div class="inv" id="inv">Loading..</div>
-<!----
 <div class="popup" id="popup">Loading..</div>
+<!----
 <div class="invbutton" id="invbutton">Loading..</div>
 <div class="inv" id="inv">Loading..</div>
 <div class="stuff" id="stuff">Loading..</div>

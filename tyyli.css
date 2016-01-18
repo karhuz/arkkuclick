@@ -195,18 +195,23 @@ background-color:#EB4343;
 	border:solid 1px #000000;
 }
 .popup {
-	position: fixed;
-	display:block;
-	width:15%;
-	height:20px;
-	margin-top:8%;
-	top:8%;
-	margin-left:40%;
-	border:solid 1px #000000;
-	text-align:center;
-	font-size: 10px;
-	font-family: Tahoma, Geneva, sans-serif;
+	position:absolute;
+	left:50%;
+	top:25%;
+	z-index:10000;
+	pointer-events:none;
 }
+
+.pop
+{
+	font-weight:bold;
+	width:200px;
+	height:20px;
+	font-size:20px;
+	text-align:center;
+   color:black;
+}
+
 .stuff {
 	position: fixed;
 	display:block;

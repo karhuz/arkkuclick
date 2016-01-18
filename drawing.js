@@ -17,7 +17,27 @@ var y = 0;
 // pushin ikä aluksi sata
 var life = 100;
 
+// POPUP SYSTEEMI
+//--------------------------------------------------------------------
+var popupteksti='error';
+Popups = [];
+Popup=function(el,popupteksti)
+{
+    this.life=0;
+  this.el=el;
+  	this.offx=Math.floor(Math.random()*20-10);
+	this.offy=Math.floor(Math.random()*20-10);
+  this.popupteksti=popupteksti;
+	Popups.push(this);
+}
 
+
+
+//------------------------------------------------------------------------
+
+
+
+// laatikon pyörittelymuuttujat
 var laatikkorotatio = getRandomInt(-5, 5);
 var uusirotaatio = 0;
 
@@ -172,6 +192,24 @@ function showloot(str,merkkix,merkkiy){
 function TimerTick(){
 
 
+
+	// POPUP SYSTEEEMI
+var popupteksti='';
+	for (var i in Popups) {
+  var rect=document.getElementById(Popups[i].el).getBoundingClientRect();
+  		var x=1;
+		var y=-Math.pow(Popups[i].life/100,0.5)*10+Popups[i].offy+10;
+		//viimenesellä jakavalla luvulla säädetään nopeutta, mitä korkempi, sen hitaampi
+		var opacity=1-(Math.max(Popups[i].life,20)-20)/300;
+    popupteksti+='<div class="pop" style="position:absolute;left:'+x+'px;top:'+y+'px;opacity:'+opacity+';">'+Popups[i].popupteksti+'</div>';
+  Popups[i].life+=2;
+ if (Popups[i].life>=500) Popups.splice(i,1);
+  }
+  document.getElementById("popup").innerHTML=popupteksti;
+
+
+
+
 	//pyoritetaan laatikkoa huvikseen hiljalleen
 
 	if (laatikkorotatio < 0)
@@ -215,6 +253,7 @@ if (superpoints>=25)
 {
 	superpoints = 0;
 	showStars = true;
+	new Popup('popup','Its a star!');
 	 new Drop('item','*');
 	 stars++;
 }
