@@ -9,8 +9,8 @@ CLICK();
 
 function CLICK () 
 {
+	superpoints++;
 clicks++;
-superpoints++;
 
 howmany = "1";
 

@@ -179,7 +179,7 @@ if (superpoints>=25)
 	 stars++;
 }
 
-if (clicks==100) showInv = true;
+if (clicks>=100) showInv = true;
 
 if (showInv == true) 
 {

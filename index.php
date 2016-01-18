@@ -63,5 +63,7 @@ ga('send', 'pageview');
 <script src="click.js"></script>
 
 <script src="updates.js"></script>
+<script src="commands.js"></script>
+
 </body>
 </html>
