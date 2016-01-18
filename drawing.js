@@ -1,5 +1,7 @@
 // sick fps system
-var ticks = setInterval(TimerTick, 60.333);
+
+//60 fps(?)
+var ticks = setInterval(TimerTick, 17.333);
 
 
 // piirtamiseen helpottavia muuttujia
@@ -14,6 +16,10 @@ var y = 0;
 
 // pushin ikä aluksi sata
 var life = 100;
+
+
+var laatikkorotatio = getRandomInt(-5, 5);
+var uusirotaatio = 0;
 
 // +1 +2 yms multiplier paska
 Pops = [];
@@ -72,8 +78,7 @@ $('canvas').drawRect({
   x: x+center_x, y: y+center_y,
   width: 427,
   height: 320,
-  click: function(CLICK) {
-  }
+  rotate: uusirotaatio
 });
 
 //hymiö
@@ -167,6 +172,41 @@ function showloot(str,merkkix,merkkiy){
 function TimerTick(){
 
 
+	//pyoritetaan laatikkoa huvikseen hiljalleen
+
+	if (laatikkorotatio < 0)
+	{
+		uusirotaatio = uusirotaatio - 0.01;
+	}
+
+	if (laatikkorotatio > 0)
+	{
+		uusirotaatio = uusirotaatio + 0.01;
+	}
+
+	if (uusirotaatio === laatikkorotatio)
+	{
+		laatikkorotatio = getRandomInt(-5, 5);
+	}
+
+	if (laatikkorotatio == 0)
+	{
+		uusirotaatio = uusirotaatio + 0.01;
+	}
+
+	if (uusirotaatio > 5)
+		{
+			laatikkorotatio = getRandomInt(-5, 5);
+			uusirotaatio = uusirotaatio - 0.01;
+		}
+
+		if (uusirotaatio < -5)
+		{
+			laatikkorotatio = getRandomInt(-5, 5);
+			uusirotaatio = uusirotaatio + 0.01;
+		}
+
+
 	// klikkauksee liittyvää paskaaa
 
 if (clicks>=10) showClicks = true;
@@ -250,4 +290,11 @@ showloot(Drops[i].str, merkkix,merkkiy);
 
 	}
 	//console.log("tik tik");
+}
+
+
+
+//copied this from mozilla so,mething something :D
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
